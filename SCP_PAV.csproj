@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3555FBC6-16E9-46FE-BDAE-D9FD194DA619}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SCP_PAV</RootNamespace>
+    <AssemblyName>SCP_PAV</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controladores\ClassificacaoProdutoControlador.cs" />
+    <Compile Include="Controladores\ClienteControlador.cs" />
+    <Compile Include="Controladores\ContaPagarControlador.cs" />
+    <Compile Include="Controladores\FornecedorControlador.cs" />
+    <Compile Include="Controladores\ItemCompraControlador.cs" />
+    <Compile Include="Controladores\ProdutoControlador.cs" />
+    <Compile Include="Entidade\ContaPagarEntidade.cs" />
+    <Compile Include="Entidade\FornecedorEntidade.cs" />
+    <Compile Include="Entidade\ItemCompraEntidade.cs" />
+    <Compile Include="Entidade\ProdutoEntidade.cs" />
+    <Compile Include="Persistencia\ControladorCliente.cs" />
+    <Compile Include="Telas\frmItemCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmItemCompra.Designer.cs">
+      <DependentUpon>frmItemCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmProduto.Designer.cs">
+      <DependentUpon>frmProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmProdutoClassificação.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmProdutoClassificação.Designer.cs">
+      <DependentUpon>frmProdutoClassificação.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testes\ControladorCadastroCliente.cs" />
+    <Compile Include="Testes\TabelaCliente.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Testes\TabelaFornecedor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Testes\TabelaPessoa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Testes\Cliente.cs" />
+    <Compile Include="Entidade\ClienteEntidade.cs" />
+    <Compile Include="Testes\Contato.cs" />
+    <Compile Include="Persistencia\Entidades.cs" />
+    <Compile Include="Enum\OperacaoCadastro.cs" />
+    <Compile Include="Testes\cadastroClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testes\cadastroClientes.Designer.cs">
+      <DependentUpon>cadastroClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testes\cadastroFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testes\cadastroFornecedor.Designer.cs">
+      <DependentUpon>cadastroFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testes\Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testes\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistencia\BancoDados.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testes\Fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testes\Fornecedor.Designer.cs">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmFornecedor.Designer.cs">
+      <DependentUpon>frmFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testes\Teste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testes\Teste.Designer.cs">
+      <DependentUpon>Teste.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Telas\frmItemCompra.resx">
+      <DependentUpon>frmItemCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmProduto.resx">
+      <DependentUpon>frmProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmProdutoClassificação.resx">
+      <DependentUpon>frmProdutoClassificação.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testes\cadastroClientes.resx">
+      <DependentUpon>cadastroClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testes\cadastroFornecedor.resx">
+      <DependentUpon>cadastroFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testes\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Testes\Fornecedor.resx">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmFornecedor.resx">
+      <DependentUpon>frmFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testes\Teste.resx">
+      <DependentUpon>Teste.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
